@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.stupid.method.calendar.CalendarActivity" >
+
+    <HorizontalScrollView
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bton_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上个月/周" />
+
+            <Button
+                android:id="@+id/bton_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toggle" />
+
+            <Button
+                android:id="@+id/bton_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下个月/周" />
+
+            <Button
+                android:id="@+id/bton_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="today" />
+
+            <Button
+                android:id="@+id/bton_otherMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="隐/显上下月" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.stupid.method.calendar.CalendarViewPager
+        android:id="@+id/calendarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarview"
+        android:layout_centerHorizontal="true"
+        android:text="&lt;>" />
+
+</RelativeLayout>
